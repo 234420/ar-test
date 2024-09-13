@@ -9,7 +9,9 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind; filterMinCF:0.00001; filterBeta: 10" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/image-tracking/assets/card-example/card.png" />
+        <video id="penguin-sledding" autoplay="true" loop="true" muted>
+          <source src="./ocean_1.mp4" type="video/mp4">
+        </video>
         <a-asset-item id="avatarModel" src="./usa.glb"></a-asset-item>
       </a-assets>
 
@@ -20,8 +22,9 @@
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
-        <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.5 0.5 0.5" src="#avatarModel" animation-mixer>
-      </a-entity>
+        <!-- <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.5 0.5 0.5" src="#avatarModel" animation-mixer> -->
+          <a-video src="#penguin-sledding" width="16" height="9" scale="0.1 0.1 0.1" position="0 0 0"></a-video>
+        </a-entity>
       <a-entity mindar-image-target="targetIndex: 2">
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
         <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.5 0.5 0.5" src="#avatarModel" animation-mixer>
